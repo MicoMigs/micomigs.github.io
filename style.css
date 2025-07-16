@@ -1,61 +1,94 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background: #f4f4f4;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mico Santiago – Computer Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mico Santiago – Computer & Electrical Engineer</h1>
+    <blockquote>
+      “The noblest pleasure is the joy of understanding.”
+    </blockquote>
+  </header>
 
-header {
-  background: #1a1a1a;
-  color: #fff;
-  padding: 2rem;
-  text-align: center;
-}
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#youtube">YouTube</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-nav {
-  display: flex;
-  justify-content: center;
-  background: #333;
-}
+  <main>
+    <section id="home">
+      <h2>Home</h2>
+      <p>Welcome to my engineering portfolio and project showcase! I'm Mico Santiago, a computer & electrical engineer at NAVAIR and former professional athlete. This website is where I share real-world engineering projects, hands-on tutorials, and insights from my journey through embedded systems, FPGAs, AI, and more.</p>
+    </section>
 
-nav a {
-  color: #fff;
-  padding: 1rem;
-  text-decoration: none;
-}
+    <section id="youtube">
+      <h2>🎥 YouTube Tutorials</h2>
+      <p>Subscribe to my <a href="https://youtube.com/@micosantiago" target="_blank">YouTube Channel</a> for deep dives and hands-on engineering content:</p>
+      <ul>
+        <li><strong>TBD</strong> – x</li>
+        <li><strong>TBD</strong> – x</li>
+        <li><strong>TBD</strong> – x</li>
+        <li><strong>TBD</strong> – x</li>
+        <li><strong>TBD</strong> – x</li>
+      </ul>
+    </section>
 
-nav a:hover {
-  background: #555;
-}
+    <section id="projects">
+      <h2>🔧 Projects</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th><th>Project</th><th>Role & Tech Stack</th><th>Highlights</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>TBD</td><td><strong>Pipelined RISC-V CPU Core</strong></td><td>Verilog, SystemVerilog, ModelSim, Vivado, Intel Quartus</td><td>Design a pipelined CPU core, optimize stages (fetch, decode, execute, write-back), verify with testbenches. <a href="#">Code 💻</a></td></tr>
+          <tr><td>TBD</td><td><strong>PCIe Gen3 Endpoint Core</strong></td><td>Verilog, VHDL, PCIe, AXI, DDR3, Vivado, Quartus</td><td>Implement high-speed PCIe Gen3 interface, integrate DDR3, benchmark performance, focus on memory-mapped I/O. <a href="#">Video ▶</a></td></tr>
+          <tr><td>TBD</td><td><strong>Embedded Linux on FPGA SoC</strong></td><td>Linux, Yocto, Verilog, Xilinx Zynq, Intel Cyclone, Vivado, Quartus, C, Python</td><td>Port Linux to FPGA, create custom device drivers, hardware-software co-design, hands-on with embedded Linux. <a href="#">Demo ▶</a></td></tr>
+          <tr><td>TBD</td><td><strong>RTOS-Based Sensor Network</strong></td><td>FreeRTOS, ARM Cortex-M, STM32, C, LoRaWAN, BLE, I²C, SPI, STM32CubeIDE</td><td>Develop multi-node sensor network, implement real-time task scheduling, wireless communication with LoRaWAN/BLE, sensor interfacing. <a href="#">Tutorial ▶</a></td></tr>
+          <tr><td>TBD</td><td><strong>Digital Signal Processing (DSP) Accelerator on FPGA</strong></td><td>VHDL, Verilog, Vivado, Quartus, DSP libraries, AXI-Lite, C, Python</td><td>Implement DSP algorithms (FFT, IIR filters), accelerate processing on FPGA, interface via AXI-Lite for high-speed data handling. <a href="#">Tutorial ▶</a></td></tr>
+        </tbody>
+      </table>
+    </section>
 
-main {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
+    <section id="about">
+      <h2>👨‍💻 About Me</h2>
+      <p>I'm currently a test engineer at NAVAIR, working on aviation systems and embedded hardware. I bridge the gap between hardware and software, and love building intelligent systems that interact with the real world.</p>
+    </section>
 
-h2 {
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.5rem;
-}
+    <section id="roadmap">
+      <h2>📚 Learning Roadmap</h2>
+      <ul>
+        <li>Complete Art of Electronics</li>
+        <li>Build FPGA Foundational Skills</li>
+        <li>Build Embedded Foundational Skills</li>
+        <li>Showcase knowledge on YouTube or Blogs</li>
+      </ul>
+    </section>
 
-.card {
-  background: white;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
+    <section id="contact">
+      <h2>📬 Contact</h2>
+      <ul>
+        <li>📧 Email: <a href="mailto:micomiguelsantiago@gmail.com">micomiguelsantiago@gmail.com</a></li>
+        <li>💼 LinkedIn: <a href="https://linkedin.com/in/micosantiago" target="_blank">linkedin.com/in/micosantiago</a></li>
+        <li>💻 GitHub: <a href="https://github.com/micomigs" target="_blank">github.com/MicoMigs</a></li>
+        <li>🧠 Subscribe: <a href="https://www.youtube.com/@MicoMigs" target="_blank">YouTube Channel</a></li>
+      </ul>
+    </section>
+  </main>
 
-.video {
-  margin-top: 1rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #1a1a1a;
-  color: white;
-}
+  <footer>
+    <p>© 2025 Mico Santiago. All rights reserved.</p>
+  </footer>
+</body>
+</html>
