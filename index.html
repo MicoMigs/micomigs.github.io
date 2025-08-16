@@ -112,87 +112,76 @@
           <a href="https://github.com/MicoMigs" target="_blank" rel="noopener">github.com/micomigs</a></li>
       </ul> 
     </section> -->
-    <section id="contact">
-      <h2>📬 Contact</h2>
+  <section id="contact">
+    <h2>📬 Contact</h2>
 
-      <div class="contact-cards">
-        <!-- GitHub Card -->
-        <article class="contact-card" aria-labelledby="gh-title">
-          <div class="contact-card__header">
-            <img src="https://github.com/MicoMigs.png?size=200" alt="" class="avatar" width="64" height="64" loading="lazy">
-            <div>
-              <h3 id="gh-title">GitHub</h3>
-              <a href="https://github.com/MicoMigs" target="_blank" rel="noopener noreferrer">@MicoMigs</a>
-            </div>
+    <div class="contact-cards">
+      <!-- GitHub (custom card) -->
+      <article class="contact-card" aria-labelledby="gh-title">
+        <div class="contact-card__header">
+          <img src="https://github.com/MicoMigs.png?size=200" alt="" class="avatar" width="64" height="64" loading="lazy">
+          <div>
+            <h3 id="gh-title">GitHub</h3>
+            <a href="https://github.com/MicoMigs" target="_blank" rel="noopener noreferrer">@MicoMigs</a>
+            <p class="subtitle">Come visit my GitHub to see my past and present work</p>
           </div>
+        </div>
 
-          <p id="gh-bio" class="muted">Loading bio…</p>
+        <p id="gh-bio" class="muted">Loading bio…</p>
 
-          <ul class="meta">
-            <li><strong id="gh-repos">–</strong> repos</li>
-            <li><strong id="gh-followers">–</strong> followers</li>
-          </ul>
+        <ul class="meta">
+          <li><strong id="gh-repos">–</strong> repos</li>
+          <li><strong id="gh-followers">–</strong> followers</li>
+        </ul>
 
-          <a class="button" href="https://github.com/MicoMigs" target="_blank" rel="noopener noreferrer">View profile</a>
-        </article>
+        <a class="button" href="https://github.com/MicoMigs" target="_blank" rel="noopener noreferrer">View profile</a>
+      </article>
 
-        <!-- LinkedIn Card -->
-        <article class="contact-card" aria-labelledby="li-title">
-          <h3 id="li-title" class="sr-only">LinkedIn</h3>
-          <div class="li-badge-wrap">
-            <div class="LI-profile-badge"
-                data-version="v1"
-                data-size="large"
-                data-locale="en_US"
-                data-type="vertical"
-                data-theme="light"
-                data-vanity="mico-santiago">
-              <a class="LI-simple-link"
-                href="https://www.linkedin.com/in/mico-santiago"
-                target="_blank" rel="noopener noreferrer">
-              </a>
-            </div>
+      <!-- LinkedIn (custom card, no iframe/script) -->
+      <article class="contact-card" aria-labelledby="li-title">
+        <div class="contact-card__header">
+          <!-- Unavatar pulls your LinkedIn avatar without LinkedIn’s script.
+              Fallback to GitHub avatar if unavailable. -->
+          <img
+            src="https://unavatar.io/linkedin/mico-santiago?fallback=https://github.com/MicoMigs.png"
+            alt=""
+            class="avatar" width="64" height="64" loading="lazy">
+          <div>
+            <h3 id="li-title">LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/mico-santiago" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/mico-santiago
+            </a>
+            <p class="subtitle">Electrical Engineer | Former Professional Tennis Player</p>
           </div>
-        </article>
+        </div>
 
-      <!-- GitHub stats (no token needed) -->
-      <script>
-        (function(){
-          fetch('https://api.github.com/users/MicoMigs')
-            .then(r => r.ok ? r.json() : Promise.reject(r))
-            .then(d => {
-              const bio = document.getElementById('gh-bio');
-              const repos = document.getElementById('gh-repos');
-              const followers = document.getElementById('gh-followers');
-              bio.textContent = d.bio || 'Embedded + FPGA projects.';
-              if (typeof d.public_repos === 'number') repos.textContent = d.public_repos;
-              if (typeof d.followers === 'number') followers.textContent = d.followers;
-            })
-            .catch(() => {
-              const bio = document.getElementById('gh-bio');
-              if (bio) bio.textContent = 'Embedded systems, FPGA, and driver dev.';
-            });
-        })();
-      </script>
+        <p class="muted">
+          Connect with me on LinkedIn. Here you can find my professional background, work experience and education.
+        </p>
 
-      <!-- LinkedIn badge script with manual initialization -->
-      <script>
-        (function() {
-          const script = document.createElement('script');
-          script.src = 'https://platform.linkedin.com/badges/js/profile.js';
-          script.type = 'text/javascript';
-          script.onload = function() {
-            // Force re-scan for badges after script loads
-            if (window.LI && window.LI.Badge) {
-              window.LI.Badge.init();
-            }
-          };
-          document.head.appendChild(script);
-        })();
-      </script>
-
+        <a class="button" href="https://www.linkedin.com/in/mico-santiago" target="_blank" rel="noopener noreferrer">Open LinkedIn</a>
+      </article>
+    </div>
+  </section>
+  <script>
+    (function(){
+      fetch('https://api.github.com/users/MicoMigs')
+        .then(r => r.ok ? r.json() : Promise.reject(r))
+        .then(d => {
+          const bio = document.getElementById('gh-bio');
+          const repos = document.getElementById('gh-repos');
+          const followers = document.getElementById('gh-followers');
+          if (bio) bio.textContent = d.bio || 'Embedded + FPGA projects.';
+          if (typeof d.public_repos === 'number' && repos) repos.textContent = d.public_repos;
+          if (typeof d.followers === 'number' && followers) followers.textContent = d.followers;
+        })
+        .catch(() => {
+          const bio = document.getElementById('gh-bio');
+          if (bio) bio.textContent = 'Embedded systems, FPGA, and driver dev.';
+        });
+    })();
+  </script>
   </main>
-
   <footer>
     <p>© 2025 Mico Santiago</p>
   </footer>
