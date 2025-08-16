@@ -154,7 +154,6 @@
             </div>
           </div>
         </article>
-      </div>
 
       <!-- GitHub stats (no token needed) -->
       <script>
@@ -176,10 +175,21 @@
         })();
       </script>
 
-      <!-- LinkedIn badge script -->
-      <script src="https://platform.linkedin.com/badges/js/profile.js"
-              async defer type="text/javascript"></script>
-    </section>
+      <!-- LinkedIn badge script with manual initialization -->
+      <script>
+        (function() {
+          const script = document.createElement('script');
+          script.src = 'https://platform.linkedin.com/badges/js/profile.js';
+          script.type = 'text/javascript';
+          script.onload = function() {
+            // Force re-scan for badges after script loads
+            if (window.LI && window.LI.Badge) {
+              window.LI.Badge.init();
+            }
+          };
+          document.head.appendChild(script);
+        })();
+      </script>
 
   </main>
 
