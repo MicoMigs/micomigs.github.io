@@ -219,3 +219,70 @@ footer{
 @keyframes rise-in{
   to{ opacity: 1; transform: none; }
 }
+
+/* Contact: two-column responsive grid */
+.contact-cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: .75rem;
+}
+
+/* Card look */
+.contact-card{
+  background: var(--surface, #fff);
+  color: var(--text, #111);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: var(--radius, 16px);
+  box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,.08));
+  padding: 1rem;
+}
+
+.contact-card__header{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  margin-bottom:.5rem;
+}
+
+.contact-card .avatar{
+  border-radius: 999px;
+  border:1px solid rgba(0,0,0,.06);
+}
+
+.contact-card .muted{
+  color: var(--muted, #6b7280);
+  margin:.25rem 0 .5rem;
+}
+
+.contact-card .meta{
+  list-style:none;
+  display:flex;
+  gap:1rem;
+  padding:0;
+  margin:.25rem 0 1rem;
+  color: var(--muted, #6b7280);
+}
+
+.contact-card .button{
+  display:inline-block;
+  padding:.5rem .75rem;
+  border-radius:12px;
+  border:1px solid var(--border, #e5e7eb);
+  text-decoration:none;
+}
+
+/* Center the LinkedIn badge inside the card */
+.li-badge-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height: 220px; /* keeps card heights balanced with GitHub card */
+}
+
+/* accessibility helper */
+.sr-only{
+  position:absolute!important;
+  width:1px;height:1px;
+  padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
